@@ -213,7 +213,36 @@ router.get('/owner/my-businesses', auth, requireRole('business_owner'), (req, re
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json(businesses);
+      
+      // Fetch services for each business
+      const businessesWithServices = [];
+      let completed = 0;
+      
+      if (businesses.length === 0) {
+        return res.json([]);
+      }
+      
+      businesses.forEach((business) => {
+        db.all(
+          'SELECT * FROM services WHERE business_id = ? ORDER BY price',
+          [business.id],
+          (err, services) => {
+            if (err) {
+              return res.status(500).json({ error: err.message });
+            }
+            
+            businessesWithServices.push({
+              ...business,
+              services: services || []
+            });
+            
+            completed++;
+            if (completed === businesses.length) {
+              res.json(businessesWithServices);
+            }
+          }
+        );
+      });
     }
   );
 });
