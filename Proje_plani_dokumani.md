@@ -1,12 +1,5 @@
 # Proje Planı Dokümanı (Project Plan Document)
 
-## Katkıda Bulunanlar (Authorship)
-Bu dokümanın hazırlanmasına katkı sağlayan ekip üyeleri:
-* Ahmet Yılmaz
-* Burak Kaya
-* Ceyda Demir
-* Deniz Arslan
-
 ## İçindekiler (Table of Contents)
 1.  Proje Kapsamı (Project Scope)
 2.  Proje Organizasyonu - Kişiler (Roller ve Sorumluluklar)

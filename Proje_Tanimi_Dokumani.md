@@ -1,12 +1,5 @@
 # Proje Tanım Dokümanı (Project Definition Document)
 
-## Katkıda Bulunanlar (Authorship)
-Bu dokümanın hazırlanmasına katkı sağlayan ekip üyeleri:
-* Ahmet Adil Akça
-* Arda Onat Acar
-* Aybars Kansu Han
-* Eren Budak
-
 ## İçindekiler (Table of Contents)
 1.  Proje Adı
 2.  Proje Özeti
